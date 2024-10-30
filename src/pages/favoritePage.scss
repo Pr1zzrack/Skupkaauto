@@ -1,0 +1,13 @@
+.no-favorites-message {
+  font-size: 1.5rem; 
+  color: #004658; 
+  text-align: center; 
+  margin: 40px 0; 
+}
+
+@media (max-width: 312px) {
+  .no-favorites-message {
+    font-size: 1.5rem; 
+    margin: 20px 0; 
+  }
+}

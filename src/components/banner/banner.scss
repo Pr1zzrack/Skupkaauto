@@ -1,0 +1,69 @@
+.swiper {
+  padding: 50px 0;
+}
+.swiper-container {
+  background: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 220px;
+  height: 220px;
+  position: relative;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.texts {
+  color: #fff;
+  font-size: 12px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  position: absolute;
+  left: 12%;
+  bottom: 13%;
+}
+
+@media screen and (max-width: 900px) {
+  .swiper-slide {
+    width: 180px;
+    height: 180px;
+  }
+  .texts {
+    width: 160px;
+    left: 10%;
+    bottom: 10%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .swiper-slide {
+    width: 130px;
+    height: 130px;
+  }
+  .texts {
+    font-size: 8px;
+    width: 100px;
+    left: 10%;
+    bottom: 10%;
+  }
+}
+@media (max-width: 400px) {
+  .swiper-slide {
+    width: 100px;
+    height: 100px;
+  }
+
+  .texts {
+    width: 80px;
+    font-size: 6px;
+    left: 10%;
+    bottom: 10%;
+  }
+}

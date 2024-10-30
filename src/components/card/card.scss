@@ -1,0 +1,295 @@
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.transitioning {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.card-hover-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prev-photo-button,
+.next-photo-button {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.prev-photo-button {
+  position: absolute;
+  top: 45%;
+  left: 2%;
+}
+
+.next-photo-button {
+  position: absolute;
+  top: 45%;
+  right: 2%;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 4%;
+  right: 3%;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.heart-icon .favorite {
+  color: red;
+}
+
+.heart-icon.animate {
+  animation: heart-bounce 0.3s;
+}
+
+@keyframes heart-bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-content {
+  padding: 12px;
+  flex: 1;
+}
+
+.card-content .card-title {
+  font-size: 16px;
+  margin: 0 0 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-content .card-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 0 6px;
+  color: #000;
+}
+
+.card-content.card-installment {
+  font-size: 14px;
+  color: #555;
+  margin: 0 0 12px;
+}
+
+.card-details {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #777;
+  margin-top: 8px;
+}
+
+.card-details span {
+  flex: 50%;
+  margin-top: 4px;
+}
+
+.card-details .detail-label {
+  font-weight: bold;
+  color: #555;
+  flex-basis: 40%;
+}
+
+.card-details .detail-value {
+  flex-basis: 60%;
+}
+@media screen and (min-width: 900px) {
+  .arrows-adaptive {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  .card:hover {
+    transform: translateY(0) !important;
+  }
+}
+@media (max-width: 768px) {
+  .card-image {
+    height: 120px;
+  }
+
+  .prev-photo-button,
+  .next-photo-button {
+    padding: 4px 8px;
+  }
+
+  .heart-icon {
+    width: 30px !important;
+    font-size: 20px;
+  }
+
+  .card-content .card-title {
+    font-size: 14px;
+  }
+
+  .card-content .card-price {
+    font-size: 18px;
+  }
+
+  .card-content .card-installment {
+    font-size: 12px;
+  }
+
+  .card-details {
+    font-size: 10px;
+    margin-top: 6px;
+  }
+  .card-details .detail-label {
+    flex-basis: 45%;
+  }
+
+  .card-details .detail-value {
+    flex-basis: 55%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-image {
+    height: 100px;
+  }
+
+  .prev-photo-button,
+  .next-photo-button {
+    padding: 2px 6px;
+  }
+
+  .heart-icon {
+    font-size: 18px;
+  }
+
+  .card-content .card-title {
+    font-size: 12px;
+  }
+
+  .card-content .card-price {
+    font-size: 16px;
+  }
+
+  .card-content .card-installment {
+    font-size: 10px;
+  }
+
+  .card-details {
+    font-size: 8px;
+    margin-top: 4px;
+  }
+
+  .card-details .detail-label {
+    flex-basis: 50%;
+  }
+
+  .card-details .detail-value {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  .card-image {
+    height: 80px;
+  }
+
+  .prev-photo-button,
+  .next-photo-button {
+    padding: 1px 4px;
+  }
+
+  .heart-icon {
+    font-size: 16px;
+  }
+
+  .card-content {
+    padding: 8px;
+  }
+
+  .card-content .card-title {
+    font-size: 10px;
+  }
+
+  .card-content .card-price {
+    font-size: 12px;
+  }
+
+  .card-content .card-installment {
+    font-size: 8px;
+  }
+
+  .card-details {
+    font-size: 6px;
+    margin-top: 2px;
+  }
+
+  .card-details .detail-label {
+    flex-basis: 55%;
+  }
+
+  .card-details .detail-value {
+    flex-basis: 45%;
+  }
+
+  .card-details span {
+    margin-top: 2px;
+  }
+}
+
+@media (max-width: 900px) {
+  .arrows {
+    display: none;
+  }
+  .arrows-adaptive {
+    display: block;
+  }
+  .prev-photo-button,
+  .next-photo-button {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .heart-icon {
+    display: block;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

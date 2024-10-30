@@ -1,0 +1,135 @@
+.form {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .btn-back {
+    background: none;
+    border: none;
+    color: #027b9a;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    text-align: left;
+
+    &:hover {
+      background: #fffff2;
+      color: #00bef0;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #027b9a;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  input,
+  select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  input:focus,
+  select:focus {
+    border-color: #027b9a;
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .btn-submit {
+    padding: 15px;
+    background-color: #027b9a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: #fffff2;
+      color: #00bef0;
+    }
+  }
+
+  .btn_toEnd {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .photo-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+
+    // img {
+    //   width: 50px;
+    //   height: 50px;
+    //   object-fit: cover;
+    //   border: 1px solid #ccc;
+    //   border-radius: 5px;
+    // }
+  }
+
+  @media (max-width: 600px) {
+    padding: 10px;
+
+    .btn-back {
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    input,
+    select {
+      font-size: 14px;
+      padding: 8px;
+    }
+
+    .btn-submit {
+      font-size: 14px;
+      padding: 12px;
+    }
+  }
+}
+.image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+
+  img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}

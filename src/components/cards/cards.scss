@@ -1,0 +1,191 @@
+.cards {
+  margin-top: 40px;
+  padding: 20px;
+  position: relative;
+}
+
+.card-section {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.cards-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding-bottom: 20px;
+}
+
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 288px;
+  margin: 16px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.recomendText {
+  font-size: 32px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+  flex: 1;
+}
+
+.card-title {
+  font-size: 18px;
+  margin: 0 0 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 8px;
+  color: #000;
+}
+
+.card-installment {
+  font-size: 16px;
+  color: #555;
+  margin: 0 0 16px;
+}
+
+.card-details {
+  font-size: 14px;
+  color: #777;
+}
+
+.card-details span {
+  display: block;
+  margin-top: 4px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.arrow-left {
+  background: #027b9a;
+  left: 10px;
+  border-radius: 5px;
+}
+
+.arrow-right {
+  background: #027b9a;
+  right: 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 900px) {
+  .recomendText {
+    font-size: 26px;
+  }
+
+  .arrow {
+    display: block;
+  }
+
+  .cards-container {
+    overflow-x: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    padding: 0;
+  }
+
+  .card {
+    min-width: 240px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-price {
+    font-size: 18px;
+  }
+
+  .card-installment {
+    font-size: 14px;
+  }
+
+  .card-details {
+    font-size: 12px;
+  }
+
+  .arrow {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .recomendText {
+    font-size: 18px;
+  }
+
+  .card {
+    min-width: 200px;
+  }
+
+  .card-image {
+    height: 140px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .card-price {
+    font-size: 16px;
+  }
+
+  .card-installment {
+    font-size: 12px;
+  }
+
+  .card-details {
+    font-size: 10px;
+  }
+
+  .arrow {
+    padding: 6px;
+  }
+}

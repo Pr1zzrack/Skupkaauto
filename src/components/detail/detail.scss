@@ -1,0 +1,499 @@
+.detail {
+  margin-top: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.name h1 {
+  font-size: 32px;
+  margin-bottom: 0.5em;
+}
+.selected-image {
+    width: 489px;
+    height: 326px;
+    object-fit: cover;
+}
+
+.thumbnail {
+    width: 114.75px;
+    height: 75.5px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.price {
+  font-size: 2em;
+  margin-bottom: 1em;
+  color: #027b9a;
+}
+.price-adaptive {
+  font-size: 2em;
+  color: #027b9a;
+}
+.loaderToCenter {
+  width: 100vw;
+  height: 100vh;
+}
+.loaderHelper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: #25b09b;
+  animation: l15 1s infinite linear;
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: l15 2s infinite;
+}
+.loader::after {
+  margin: 8px;
+  animation-duration: 3s;
+}
+@keyframes l15 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+.detail-header {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.detail-infoContent {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.detail-adaptive {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.detail-location {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  color: grey;
+}
+.detail-location-adaptive {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 20px;
+  color: grey;
+}
+.detail-favorite {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+.detail-favorite-adaptive {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+.car-details {
+  flex: 1;
+}
+.call {
+  border-radius: 5px;
+  padding: 15px 80px;
+  background: #027b9a;
+}
+.call:hover {
+  background-color: #fffff2;
+  color: #027b9a;
+}
+.car-images {
+  flex: 1;
+}
+
+.main-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.thumbnail-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnail-images img {
+  max-width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.thumbnail-images img.active,
+.thumbnail-images img:hover {
+  opacity: 1;
+}
+
+.show-all-thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #027b9a;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.car-details h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.car-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.car-details li {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 0.5em;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.contact-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.contact-name {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.contact-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #027b9a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-right: 20px;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  color: #027b9a;
+  background: #fffff2;
+}
+
+.contact-number {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  color: #027b9a;
+}
+
+.show-number {
+  color: green;
+  margin-left: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.contact-options .option {
+  padding: 10px;
+  background-color: #027b9a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.contact-options .option:hover {
+  background-color: #025f76;
+}
+
+.fullscreen-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.fullscreen-image img {
+  max-width: 70%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+.fullscreen-image .prev-button,
+.fullscreen-image .next-button {
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+  transition: background-color 0.3s;
+}
+
+.fullscreen-image .prev-button:hover,
+.fullscreen-image .next-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.fullscreen-image .prev-button {
+  left: 10px;
+}
+
+.fullscreen-image .next-button {
+  right: 10px;
+}
+
+.contact-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.detailText {
+  font-weight: 100;
+  color: #9ca8b4;
+  width: 130px;
+}
+
+.detail-buy-adaptive {
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.1);
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  border-radius: 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+}
+
+.detail-buy-adaptive .price-adaptive {
+  margin-bottom: 0;
+  font-size: 1.5em;
+  color: #027b9a;
+}
+
+.detail-buy-adaptive .call-adaptive {
+  border-radius: 5px;
+  padding: 15px 80px;
+  background: #027b9a;
+}
+@media screen and (min-width: 768px) {
+  .detail-adaptive,
+  .detail-buy-adaptive {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .car-details {
+    flex: none;
+  }
+  .car-details li {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .name {
+    font-size: 28px;
+  }
+  .car-details li {
+    gap: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .thumbnail-images img {
+    border-radius: 0;
+  }
+  .car-images {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .price {
+    display: none;
+  }
+  .contact-info {
+    justify-content: space-between;
+  }
+  .car-details li {
+    gap: 150px;
+    font-size: 1rem;
+  }
+  .content {
+    align-items: normal;
+    flex-direction: column-reverse;
+  }
+  .detail-header {
+    flex-direction: column;
+    margin: 0;
+  }
+  .detail-infoContent,
+  .call,
+  .main-image img {
+    display: none;
+  }
+  .price {
+    margin-bottom: 0;
+  }
+  .thumbnail-images {
+    display: flex;
+    overflow-y: scroll;
+  }
+  .thumbnail-images::-webkit-scrollbar {
+    display: none;
+  }
+  .thumbnail-images img {
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact-info {
+    flex-direction: column;
+  }
+  .name {
+    font-size: 24px;
+  }
+  .car-details li {
+    gap: 60px;
+  }
+  .price {
+    font-size: 1.5em;
+  }
+  .call-adaptive {
+    padding: 10px 60px !important;
+  }
+  .price-adaptive {
+    font-size: 1rem !important;
+  }
+  .detail-location,
+  .detail-favorite {
+    font-size: 16px;
+  }
+
+  .detail-infoContent {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-button {
+    margin-right: 0;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+  .contact-name {
+    margin-right: 0;
+  }
+
+  .contact-avatar {
+    margin: 0;
+    width: 40px;
+    height: 40px;
+  }
+  .contact-options {
+    margin-left: 0;
+  }
+
+  .thumbnail-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 440px) {
+  .name {
+    font-size: 20px;
+  }
+  .thumbnail-images img {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .car-details li {
+    gap: 20px;
+  }
+}
